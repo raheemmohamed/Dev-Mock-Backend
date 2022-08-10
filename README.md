@@ -71,7 +71,7 @@ app.use(
 );
 ```
 
-## Node-Mock backend Project Structor
+## Node-Mock backend Project Structure
 
 Here is Node-Mock backend Project Structure.
 
