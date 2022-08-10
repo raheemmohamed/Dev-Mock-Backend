@@ -14,6 +14,34 @@ This is Node Mock backend, developed using following Tech stack,`NodeJS`, `Expre
 
 ![Node-Mock Backend Tech stack](https://i.ibb.co/pXD5n50/Node-mock-backend-tech-stack.png)
 
+# How to run this Node-Mock Backend
+
+Follow below steps and run your server in your local development environment
+
+- Install `NodeJS` if you are not installed
+- Pull this codebase from the GitHub
+- Do `npm install`, it's take while to install dependencies
+- Run using `npm start` command or if you want `watch` mode then use follow command `npm run watch`
+- open your browser and enter your localhost - default set `http://localhost:8000`, if you want to run on different `PORT` updated your `package.json`
+
+```
+"scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "watch": "SET PORT=8000 && nodemon server.js"
+  },
+```
+
+once you up the server using given `commands` then you can see the PORT your `server` running on, refer below screenshot
+
+![Server running PORT](https://i.ibb.co/YTK3YjJ/node-running-port-localhost.png)
+
+# Sceenshot of Node-Mock Backend
+
+Once your server is up, this is the view you will get
+
+![Node-mock backend server up](https://i.ibb.co/HqBwx30/Node-mock-backend-server-up.png)
+
 ## Whay You need this ?
 
 If you are a Frontend developer normally integration is one of the task you need perform in your day to day programming life.
@@ -55,22 +83,22 @@ Here is Node-Mock backend Project Structure.
 
 ```
 Dev-Mock-Backend/
-├─ controller/
-│ ├─ users.controller.js
-├─ models/
-| ├─ users,model.js
-├─ public/
-| ├─ db/
-| ├─ nodeMockDB.json
-| ├─ images
-| ├─ rocket.gif
-├─ routes/
-| ├─ users.router.js
-├─ views/
-| ├─ welcome.hbs
-├─ app.js
-├─ server.js
-├─ package.json
+    ├── controller/
+    │       ├── users.controller.js
+    ├── models/
+    |       ├─ users,model.js
+    ├── public/
+    |       ├─ db/
+    |           ├─ nodeMockDB.json
+    |       ├─ images
+    |           ├─ rocket.gif
+    ├── routes/
+    |       ├─ users.router.js
+    ├── views/
+    |       ├─ welcome.hbs
+    ├── app.js
+    ├── server.js
+    ├── package.json
 ```
 
 ## Who Am I ?
