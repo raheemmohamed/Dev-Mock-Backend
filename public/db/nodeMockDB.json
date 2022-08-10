@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "id": 245,
+      "name": "Raheem Mohamed",
+      "userName": "raheem",
+      "email": "raheem@gmail.com",
+      "phone": "+94723527615",
+      "website": "https://inproto.net/raheem",
+      "company": {
+        "name": "persistent pvt ltd",
+        "location": "Colombo"
+      }
+    },
+    {
+      "id": 261,
+      "name": "John Wick",
+      "userName": "john",
+      "email": "john@gmail.com",
+      "phone": "+9472213412",
+      "website": "john.com",
+      "company": {
+        "name": "DIMO",
+        "location": "Colombo"
+      }
+    }
+  ]
+}

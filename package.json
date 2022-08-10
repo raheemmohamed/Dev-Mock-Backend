@@ -1,0 +1,27 @@
+{
+  "name": "dev-mock-backend",
+  "version": "1.0.0",
+  "description": "Node Mock backend for development projects",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "watch": "SET PORT=8000 && nodemon server.js"
+  },
+  "keywords": [
+    "node mock backend"
+  ],
+  "author": "Raheem Mohamed",
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  },
+  "dependencies": {
+    "bootstrap": "^5.2.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "express-validator": "^6.14.2",
+    "hbs": "^4.2.0",
+    "node-json-db": "^2.1.0"
+  }
+}

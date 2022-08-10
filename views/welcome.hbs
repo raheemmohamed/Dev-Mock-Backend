@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node Mock Backend</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/atom-one-dark.min.css">
+    
+    <style>
+        .gradient-nav{
+                background-image: linear-gradient(to right bottom, rgba(0,155,255,1), rgba(0,212,255,1));
+        }
+    </style>
+</head>
+<body>
+    <!-- header-->
+    <header class="mb-3">
+        <nav class="navbar fixed-top gradient-nav">
+        <div class="container-fluid">
+            <a class="navbar-brand text-white" href="#">
+            <img src="https://www.svgrepo.com/show/303266/nodejs-icon-logo.svg" alt="Nodejs image" width="30" height="30" class="d-inline-block align-text-top">
+            <strong> Node Mock Backend for Development </strong>
+            </a>
+        </div>
+        </nav>
+    </header>
+
+    <div class="container-fluid">
+        <section class="text-center mb-5">
+            <div class="mb-3">
+                <h2>Your Node JS backend is up and running</h2>
+                <img src="images/rocket.gif" alt="server-up" width="15%" >
+                 <h3>On PORT:- <span class="badge rounded-pill text-bg-success">{{data.portNumber}}</span></h3>
+            </div>
+            <div class="badge text-bg-dark">Developed By Raheem Mohamed</div>
+        </section>
+
+        <section>
+            <div class="offset-md-3 col-6">
+                <div class="accordion accordion-flush" id="accordionFlushExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingOne">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                            <span class="badge text-bg-dark me-2">GET</span> /users
+                        </button>
+                        </h2>
+                        <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <p>Retirve All the Users Data</p>
+<pre>
+<code class="json">
+{
+    users: [
+        {
+            "id": 245,
+            "name": "Raheem Mohamed",
+            "userName": "raheem",
+            "email": "raheem@gmail.com",
+            "phone": "+94723527615",
+            "website": "https://inproto.net/raheem",
+            "company": {
+                "name": "persistent pvt ltd",
+                "location": "Colombo"
+            }
+        },
+        {
+            "id": 261,
+            "name": "John Wick",
+            "userName": "john",
+            "email": "john@gmail.com",
+            "phone": "+9472213412",
+            "website": "john.com",
+            "company": {
+                "name": "DIMO",
+                "location": "Colombo"
+            }
+        }
+    ]
+}
+</code>
+</pre>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                            <span class="badge text-bg-dark me-2">GET</span> /users/getUser/:userId
+                        </button>
+                        </h2>
+                        <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <p>Retrive user by passing their userId</p>
+<strong>Response</strong>                                
+<pre>
+<code class="json">
+{
+    "id": 261,
+    "name": "John Wick",
+    "userName": "john",
+    "email": "john@gmail.com",
+    "phone": "+9472213412",
+    "website": "john.com",
+    "company": {
+        "name": "DIMO",
+        "location": "Colombo"
+    }
+}
+</code>
+</pre>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                           <span class="badge text-bg-success me-2">POST</span> /users/addNewUser
+                        </button>
+                        </h2>
+                        <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <p>Add New User via passing to payload</p>
+
+<strong>Pass following key value pair to Payload</strong>
+<pre>
+<code class="json">
+{
+	"name": "John Wick",
+	"userName":"john",
+	"email": "john@gmail.com",
+	"phone": "+9472213412",
+	"website": "john.com",
+	"companyName": "DIMO",
+	"companyLocation": "Colombo"
+}
+</code>
+</pre>
+
+<p>Return Response once it's <strong>200 | success</strong></p>
+<pre>
+<code class="json">
+{
+    "succss": "New User addess successfully"
+}
+</code>
+</pre>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                           <span class="badge text-bg-danger me-2">DELETE</span> /users/deleteUserById/:userId
+                        </button>
+                        </h2>
+                        <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <p>Delete user by passing their userId</p>
+<strong>Response once user deleted successfully</strong>
+<pre>
+<code class="json">
+{
+    "success": "John Wick user deleted successfully"
+}
+</code>
+</pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <!--Scripts for bootstrap and higlight JS-->
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll()
+    </script>
+</body>
+</html>
